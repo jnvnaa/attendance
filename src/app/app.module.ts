@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 
 import { NgxScannerQrcodeModule, LOAD_WASM } from 'ngx-scanner-qrcode';
 import { QrcodescannerComponent } from './forms/qrcodescanner/qrcodescanner.component';
+import { SafePipe } from './safe.pipe';
 
 LOAD_WASM().subscribe((res: any) => console.log('LOAD_WASM', res));
 
 @NgModule({
   declarations: [
     AppComponent,
-    QrcodescannerComponent
+    QrcodescannerComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
